@@ -134,24 +134,6 @@ var xSROMap = function(){
 		});
 		highlightedMarkers = [];
 	};
-	return{
-		// Initialize silkroad world map
-		init:function(id,x=114,y=47.25,z=null,region=null){
-			// init stuffs
-			initLayers(id);
-			initControls();
-			initEvents();
-			window.onload = setInitialView(fixCoords(x,y,z,region));
-		},
-		// Highlight markers by name
-		HighlightMarkersByName: function(name) {
-			highlightMarkersByName(name);
-		},
-		// Reset all highlights
-		ResetHighlights: function() {
-			resetHighlightedMarkers();
-		},
-	};
 	// initialize layer setup
 	var initLayers = function(id){
 		// map base
@@ -494,6 +476,14 @@ var xSROMap = function(){
 			initControls();
 			initEvents();
 			window.onload = setInitialView(fixCoords(x,y,z,region));
+		},
+		// Highlight markers by name
+		HighlightMarkersByName: function(name) {
+			highlightMarkersByName(name);
+		},
+		// Reset all highlights
+		ResetHighlights: function() {
+			resetHighlightedMarkers();
 		},
 		MapCoordsToSRO:function(latlng) {
 			return CoordMapToSRO(latlng)
