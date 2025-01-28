@@ -54,6 +54,7 @@ var xSROMap = function(){
 	var mapLayer;
 	var coordGoBack;
 	var lastMarkerSelected;
+	var highlightedMarkers = []; // Keep track of highlighted markers
 	// mapping
 	var mappingLayers = {};
 	var mappingMarkers = {
@@ -107,6 +108,49 @@ var xSROMap = function(){
 
 		gameCoords['region'] = (ySector << 8) | xSector;
 		return gameCoords;
+	};
+
+	// Highlight all markers with the searched name
+	var highlightMarkersByName = function(name) {
+		// Remove previous highlights
+		resetHighlightedMarkers();
+
+		// Search and highlight markers
+		for (var type in mappingMarkers) {
+			for (var id in mappingMarkers[type]) {
+				var marker = mappingMarkers[type][id];
+				if (marker && marker.options.xMap && marker.options.xMap.name === name) {
+					L.DomUtil.addClass(marker._icon, 'leaflet-marker-selected');
+					highlightedMarkers.push(marker);
+				}
+			}
+		}
+	};
+
+	// Reset all highlighted markers
+	var resetHighlightedMarkers = function() {
+		highlightedMarkers.forEach(marker => {
+			L.DomUtil.removeClass(marker._icon, 'leaflet-marker-selected');
+		});
+		highlightedMarkers = [];
+	};
+	return{
+		// Initialize silkroad world map
+		init:function(id,x=114,y=47.25,z=null,region=null){
+			// init stuffs
+			initLayers(id);
+			initControls();
+			initEvents();
+			window.onload = setInitialView(fixCoords(x,y,z,region));
+		},
+		// Highlight markers by name
+		HighlightMarkersByName: function(name) {
+			highlightMarkersByName(name);
+		},
+		// Reset all highlights
+		ResetHighlights: function() {
+			resetHighlightedMarkers();
+		},
 	};
 	// initialize layer setup
 	var initLayers = function(id){
