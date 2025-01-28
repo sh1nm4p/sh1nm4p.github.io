@@ -706,48 +706,48 @@
         "y": 1765.55,
         "z": -312.60001
     },
-	{
-		"name": "Demon Shaitain",
-		"region": 23664,
-		"x": 1365,
-		"y": 1245,
-		"z": 0
-	},
-	{
-		"name": "Demon Shaitain",
-		"region": 23919,
-		"x": 45,
-		"y": 330,
-		"z": 0
-	},
-	{
-		"name": "Demon Shaitain",
-		"region": 23405,
-		"x": 1395,
-		"y": 315,
-		"z": 0
-	},
-	{
-		"name": "Demon Shaitain",
-		"region": 22893,
-		"x": 1635,
-		"y": 555,
-		"z": 0
-	},
-	{
-		"name": "Demon Shaitain",
-		"region": 22895,
-		"x": 795,
-		"y": 1245,
-		"z": 0
-	},
-	{
-		"name": "Demon Shaitain",
-		"region": 23153,
-		"x": 825,
-		"y": 1455,
-		"z": 0
-	},
+{
+	"name": "Demon Shaitain",
+	"region": 22895,
+	"x": 989,
+	"y": 1075,
+	"z": 0
+},
+{
+	"name": "Demon Shaitain",
+	"region": 22893,
+	"x": 1630,
+	"y": 568,
+	"z": 0
+},
+{
+	"name": "Demon Shaitain",
+	"region": 23153,
+	"x": 453,
+	"y": 1222,
+	"z": 0
+},
+{
+	"name": "Demon Shaitain",
+	"region": 23149,
+	"x": 751,
+	"y": 1587,
+	"z": 0
+},
+{
+	"name": "Demon Shaitain",
+	"region": 23664,
+	"x": 1224,
+	"y": 1415,
+	"z": 0
+},
+{
+	"name": "Demon Shaitain",
+	"region": 23919,
+	"x": 200,
+	"y": 232,
+	"z": 0
+},
 	{
 		"name": "Big Spider",
 		"region": 24966,
